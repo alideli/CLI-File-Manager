@@ -2,7 +2,12 @@ import os
 
 def handle_folder_operations(arguments):
     if(arguments.add_folder and arguments.folder_adr):
-            new_folder_path = os.path.join(arguments.folder_adr, arguments.add_folder)
+        if(isinstance(arguments.add_folder, list)):
+            folder_names = arguments.add_folder
+        else:
+            folder_names = [arguments.add_folder]
+        for folder in (folder_names):
+            new_folder_path = os.path.join(arguments.folder_adr, folder)
             if(os.path.exists(new_folder_path)):
                 print(f"Error  ====> Folder already exists: {new_folder_path}")
             else:

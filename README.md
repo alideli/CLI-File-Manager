@@ -41,7 +41,7 @@ A simple and flexible command-line tool for managing files and folders. Perform 
 | `--copy`, `-c`         | Copy files (provide destination paths in order, or use with date/format)    | `--copy "/path/to/dest1" "/path/to/dest2"`      |
 | `--date`, `-d`         | Select files older than or equal to a date (YYYY-MM-DD) for remove/copy/move| `--date 2024-01-01`                             |
 | `--format`, `-f`       | Work with files with a specific format (e.g., `jpg`, `txt`, etc.)           | `--format jpg`                                  |
-| `--add_folder`, `-af`  | Create a new folder (use with `--folder_adr` to specify parent directory)   | `--add_folder "new_folder"`                     |
+| `--add_folder`, `-af`  | Create one or more new folders (use with `--folder_adr` to specify parent directory; you can pass multiple folder names) | `--add_folder "new_folder1" "new_folder2"` |
 
 ---
 
@@ -90,6 +90,11 @@ A simple and flexible command-line tool for managing files and folders. Perform 
 - **Create a new folder inside a directory:**
   ```sh
   python main.py --folder_adr "/path/to/your/folder" --add_folder "new_folder"
+  ```
+
+- **Create multiple new folders inside a directory:**
+  ```sh
+  python main.py --folder_adr "/path/to/your/folder" --add_folder "new_folder1" "new_folder2" "new_folder3"
   ```
 
 ---

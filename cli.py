@@ -11,5 +11,5 @@ def get_arguments():
     parser.add_argument("--copy", "-c", help="use to copy files, enter destination in here", nargs="+")
     parser.add_argument("--date", "-d", help="use to remove files from a date brfore \"YYYY-MM-DD\"")
     parser.add_argument("--format", "-f", help="use to organize files (copy, move, remove) files", choices=["jpg","jpeg","png","exe","xlsx","docx","pdf","txt","py","mp3","wav","mp4","mkv"])
-    parser.add_argument("--add_folder", "-af", help="you can create new folder")
+    parser.add_argument("--add_folder", "-af", help="you can create new folder",  nargs="+")
     return parser.parse_args()
